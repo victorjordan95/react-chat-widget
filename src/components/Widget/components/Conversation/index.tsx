@@ -27,7 +27,7 @@ type Props = {
   sendButtonAlt: string;
   showTimeStamp: boolean;
   textArea?: boolean;
-  InputComponent:any
+  inputComponent:any
 };
 
 function Conversation({
@@ -47,20 +47,21 @@ function Conversation({
   sendButtonAlt,
   showTimeStamp,
   textArea,
-  InputComponent
-}: Props) {
+  inputComponent
+}: Props) { 
   return (
     <div className={cn('rcw-conversation-container', className)} aria-live="polite">
       <Header
         title={title}
+        inputComponent={inputComponent}
         subtitle={subtitle}
         toggleChat={toggleChat}
         showCloseButton={showCloseButton}
         titleAvatar={titleAvatar}
       />
       <Messages profileAvatar={profileAvatar} showTimeStamp={showTimeStamp} />
-      <QuickButtons onQuickButtonClicked={onQuickButtonClicked} />
-      <InputComponent/>
+      <QuickButtons onQuickButtonClicked={onQuickButtonClicked} /> 
+      <div>{inputComponent}</div>
     </div>
   );
 }
