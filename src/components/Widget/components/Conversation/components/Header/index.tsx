@@ -6,13 +6,14 @@ import './style.scss';
 
 type Props = {
   title: string;
+  inputComponent: string;
   subtitle: string;
   toggleChat: () => void;
   showCloseButton: boolean;
   titleAvatar?: string;
 }
 
-function Header({ title, subtitle, toggleChat, showCloseButton, titleAvatar }: Props) {
+function Header({ title, subtitle, toggleChat, showCloseButton, inputComponent, titleAvatar }: Props) { 
   return (
     <div className="rcw-header">
       {showCloseButton &&
@@ -22,7 +23,7 @@ function Header({ title, subtitle, toggleChat, showCloseButton, titleAvatar }: P
       }
       <h4 className="rcw-title">
         {titleAvatar && <img src={titleAvatar} className="avatar" alt="profile" />}
-        {title}
+        {title} 
       </h4>
       <span>{subtitle}</span>
     </div>

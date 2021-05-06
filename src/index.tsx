@@ -28,7 +28,7 @@ type Props = {
   imagePreview?: boolean;
   zoomStep?: number;
   handleSubmit?: AnyFunction;
-  InputComponent?: any;
+  inputComponent?: string;
 } & typeof defaultProps;
 
 function ConnectedWidget({
@@ -52,7 +52,7 @@ function ConnectedWidget({
   imagePreview,
   zoomStep,
   handleSubmit,
-  InputComponent
+  inputComponent
 }: Props) {
   return (
     <Provider store={store}>
@@ -78,7 +78,7 @@ function ConnectedWidget({
         zoomStep={zoomStep}
         handleSubmit={handleSubmit}
         textArea
-        InputComponent
+        inputComponent={inputComponent}
       />
     </Provider>
   );

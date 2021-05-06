@@ -28,7 +28,7 @@ type Props = {
   zoomStep?: number;
   handleSubmit?: AnyFunction;
   textArea?: boolean;
-  InputComponent:any;
+  inputComponent:any;
 }
 
 function Widget({
@@ -53,8 +53,8 @@ function Widget({
   zoomStep,
   handleSubmit,
   textArea,
-  InputComponent
-}: Props) {
+  inputComponent
+}: Props) { 
   const dispatch = useDispatch();
 
   const toggleConversation = () => {
@@ -103,7 +103,7 @@ function Widget({
       imagePreview={imagePreview}
       zoomStep={zoomStep}
       textArea
-      InputComponent
+      inputComponent={inputComponent}
     />
   );
 }
